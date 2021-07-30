@@ -1,0 +1,13 @@
+<app-header></app-header>
+
+<mat-sidenav #sidenav>
+  <app-sidenav></app-sidenav>
+</mat-sidenav>
+<mat-sidenav-container fxFlexFill>
+   
+  <mat-sidenav-content fxFlexFill>
+    <section class="container">
+      <router-outlet></router-outlet>
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>

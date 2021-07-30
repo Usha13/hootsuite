@@ -1,0 +1,13 @@
+.box{
+      height: 200px;
+      width: 200px;
+}
+.fbox{
+  background-color: #4267B2;
+}
+.ibox{
+  background-color: #cd486b;
+}
+.tbox{
+    background-color: #1DA1F2;
+}

@@ -1,0 +1,79 @@
+section{
+    padding: 35px 0;
+    text-align: center;
+}
+h1{
+    font-size: 35px;
+    color: #1976D2;
+    margin-bottom: 20px;
+}
+h2{
+    margin-bottom: 20px !important;
+}
+h3{
+    margin-bottom: 5px !important;
+}
+button{
+    margin-bottom: 10px !important;
+}
+button img{
+    margin-right: 10px;
+}
+.signup{
+    margin-top: 5px;
+}
+.orsignin{
+    margin: 15px 0 !important;
+}
+p{
+    font-size: 16px;
+    padding: 0 35px;
+}
+.rightbox{
+    align-self: center;
+    padding: 20px 100px;
+}
+
+mat-panel-title {
+    color: white;
+}
+mat-panel-title:hover {
+    color: white;
+}
+.bx{
+ border-radius: 20px;
+}
+.leftbx{
+    background-color: #BBDEFB;
+    border-radius: 20px;
+}
+.leftbx img{
+    height: 100%;
+    width: auto;
+}
+mat-form-field {
+    font-size: 16px;
+    width: 100%;
+}
+form button{
+    padding: 0 60px;
+    border-radius: 20px;
+    margin: 10px 0 !important;
+}
+@media (max-width:767px){
+    section{
+        padding: 20px 0;
+    }
+    .leftbx img{
+        height: 270px;
+    }
+    .rightbox{
+        padding: 20px 50px;
+        order: 1;
+    }
+}
+@media (max-width:991px){
+    .rightbox{
+        order: 1;
+    }
+}
