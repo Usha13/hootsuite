@@ -1,6 +1,21 @@
+.socials{
+  padding: 30px 0;
+}
 .box{
       height: 200px;
       width: 200px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      border-radius: 20px;
+      align-self: center;
+      padding: 40px;
+}
+p{
+  font-size: 16px;
+}
+.box img{
+  height: 135px;
 }
 .fbox{
   background-color: #4267B2;
@@ -10,4 +25,18 @@
 }
 .tbox{
     background-color: #1DA1F2;
+}
+.lbox{
+  background-color: #0077b5;
+}
+
+@media (max-width: 767px){
+  .box{
+    height: auto;
+    padding: 25px;
+  }
+  .box img{
+    height: 64px;
+    width: auto;
+  }
 }

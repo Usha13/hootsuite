@@ -9,6 +9,10 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { SidenavService } from './layout/sidenav/sidenav.service';
 import { SidenavComponent } from './layout/sidenav/sidenav.component';
+import { AccountComponent } from './account/account.component';
+import { InstaloginComponent } from './social/instalogin/instalogin.component';
+import { StreamsComponent } from './streams/streams.component';
+import { InstagramComponent } from './streams/instagram/instagram.component';
 
 
 @NgModule({
@@ -17,7 +21,11 @@ import { SidenavComponent } from './layout/sidenav/sidenav.component';
     SocialComponent,
     HeaderComponent,
     FooterComponent,
-    SidenavComponent
+    SidenavComponent,
+    AccountComponent,
+    InstaloginComponent,
+    StreamsComponent,
+    InstagramComponent
   ],
   
   imports: [

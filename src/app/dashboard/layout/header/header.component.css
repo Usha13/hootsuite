@@ -9,3 +9,8 @@
 mat-sidenav mat-icon{
     margin-right: 15px;
 }
+img{
+    height: 40px;
+    width: auto;
+    border-radius: 50%;
+}

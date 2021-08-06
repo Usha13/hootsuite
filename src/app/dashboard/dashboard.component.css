@@ -3,3 +3,6 @@ section{
     min-height: 100%;
     text-align: center;
 }
+mat-sidenav{
+    top:55px;
+}

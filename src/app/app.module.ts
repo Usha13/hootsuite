@@ -8,6 +8,10 @@ import { AuthModule } from './auth/auth.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { SplashComponent } from './splash/splash.component';
 import { SharedModule } from './shared/shared.module';
+import { UserService } from './shared/services/user.service';
+import { ToastrModule } from 'ngx-toastr';
+import { AuthGuard} from './auth/auth.guard';
+import { InstagramService } from './shared/services/instagram.service';
 
 
 @NgModule({
@@ -21,9 +25,10 @@ import { SharedModule } from './shared/shared.module';
     DashboardModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [UserService, AuthGuard, InstagramService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/shared/services/user.service';
 import { SidenavService } from '../sidenav/sidenav.service';
+import { SocialAuthService, SocialUser } from "angularx-social-login";
+import { User } from 'src/app/shared/models/user.model';
 
 @Component({
   selector: 'app-header',
@@ -8,15 +11,20 @@ import { SidenavService } from '../sidenav/sidenav.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private sidenavService :SidenavService) { }
+  constructor(private userService : UserService,private sidenavService :SidenavService, private userservice : UserService, public auth : SocialAuthService) { }
 
   ngOnInit(): void {
+   
   }
 
   public toggleSidenav() {
     this.sidenavService
       .toggle()
       .then(() => { });
+  }
+
+  logout(){
+      this.userservice.logoutUser()
   }
 
 }

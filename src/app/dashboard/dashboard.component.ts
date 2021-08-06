@@ -18,6 +18,12 @@ export class DashboardComponent implements OnInit {
     this.sidenavService
     .setSidenav(this.sidenav);
   }
+
+  ngAfterViewInit() :void{
+    console.log(this.sidenav);
+    this.sidenavService
+    .setSidenav(this.sidenav);
+  }
   
 
 }

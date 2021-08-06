@@ -1,0 +1,21 @@
+<div class="container">
+    <!-- <div *ngIf=" authService.authState | async as socialuser">
+        <img src="{{ socialuser.photoUrl }}">
+        <div>
+           <h4>{{ socialuser.firstName }}</h4> 
+          <p>{{ socialuser.email }}</p>
+        </div>
+      </div> -->
+
+       <div *ngIf="user">
+        <img src="{{user.picture}}">
+        <div>
+          <h4>{{ user.username }}</h4>
+          <p>{{ user.email }}</p>
+        </div>
+      </div>
+    
+    
+</div>
+
+
