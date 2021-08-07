@@ -1,0 +1,29 @@
+    <div class="instapost">
+        <div class="header">
+            <img src="../../../../../assets/images/Instagram_logo.png">
+            <h2>My Posts</h2>
+            <h3>@{{instaaccount.profile.username}}</h3>
+        </div>
+
+        <div class="posts">
+            <div *ngFor = "let postnode of instaaccount.posts.edges">
+                <div class="post">
+                    <div class="pheader">
+                        <img src="../../../../assets/images/{{instaaccount.profile.profilepic}}">
+                        <div>
+                            <h3>@{{instaaccount.profile.username}}</h3>
+                            <h4>{{postnode.node.timestamp * 1000 | date:'dd/MM/yyyy hh:mm:ss'}}</h4>
+                        </div>
+                    </div>
+                    <div class="pcaption"  *ngIf="postnode.node.caption[0] !== undefined">
+                        <p>{{postnode.node.caption[0].node.text}}</p> 
+                    </div>
+                    <div class="pimg">
+                        <img src ="{{postnode.node.display_url}}">
+                        <img src ="https://scontent-bom1-1.cdninstagram.com/v/t51.2885-15/e35/182179558_367090718032445_765770098337645147_n.jpg?_nc_ht=scontent-bom1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=gYkorwDxsDQAX9owbPt&edm=APU89FABAAAA&ccb=7-4&oh=f8baa5adaef53822a89635d3b6054363&oe=611585FF&_nc_sid=86f79a">
+                    </div>
+                    <div class="pfooter"></div>
+                </div>
+            </div>    
+        </div>
+    </div>

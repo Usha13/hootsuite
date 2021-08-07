@@ -1,0 +1,16 @@
+a{
+    text-decoration: none !important;
+    color: unset !important;
+    display: flex;
+    align-items: center;
+}
+img{
+    width: 40px;
+    height: auto;
+}
+h3{
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}

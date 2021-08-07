@@ -5,6 +5,7 @@ import { AccountComponent } from './account/account.component';
 import { DashboardComponent } from './dashboard.component';
 import { SocialComponent } from './social/social.component';
 import { InstagramComponent } from './streams/instagram/instagram.component';
+import { InstapostsComponent } from './streams/instagram/instaposts/instaposts.component';
 import { StreamsComponent } from './streams/streams.component';
 
 const routes: Routes = [
@@ -32,8 +33,24 @@ const routes: Routes = [
         component : StreamsComponent,
         children:[
           {
+            path: '',
+            redirectTo : 'instagram',
+            pathMatch: 'full'
+          },
+          {
             path: 'instagram',
-            component : InstagramComponent
+            component : InstagramComponent,
+            children : [
+              {
+                path: '',
+                redirectTo : '0',
+                pathMatch: 'full'
+              }, 
+              {
+                path: ':id',
+                component : InstapostsComponent
+              }
+            ]
           },
         ]
       },

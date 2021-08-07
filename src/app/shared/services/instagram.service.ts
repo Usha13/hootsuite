@@ -2,21 +2,22 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-
+import { filter, map } from 'rxjs/operators'; 
 
 @Injectable({
   providedIn: 'root'
 })
 export class InstagramService {
   readonly rootURL = "http://localhost:3000/api";
-
+  data : Array<Object>;
 
   constructor(private http : HttpClient,
     private toast : ToastrService, 
     private router: Router,
     ) { }
-
- 
+  
+    
+  
   loginUser(user){
     const body = {
       username: user.username,
@@ -54,7 +55,19 @@ export class InstagramService {
          posts
     }
     console.log(body)
-    return this.http.post(this.rootURL + "/insta/storedata" , body); 
+    this.http.post(this.rootURL+"/insta/storedata" , body ).subscribe((res)=>{
+      console.log(res)
+    },
+    (e)=> console.log(e))
+    return 
   }
 
+  getdata(){
+    const user = JSON.parse(localStorage.getItem('user')) 
+    const body = { userid: user._id }
+    return this.http.post(this.rootURL+"/insta/getdata" , body );  
+  }
+
+
+  
 }

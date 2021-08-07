@@ -1,3 +1,34 @@
 .insta{
     padding: 30px 0;
 }
+
+.instaitem{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.instaitem img{
+    height: 64px;
+    width: auto;
+}
+
+.instaitem .uname{
+    text-align: left;
+}
+
+.instaitem .uname h3{
+    margin-bottom: 3px;
+    color: #1976d2;
+    font-weight: 500;
+}
+
+.instaitem .uname p{
+    margin-bottom: 3px;
+}
+
+.active{
+    background-color: #d3d4d6;
+}

@@ -13,6 +13,7 @@ import { AccountComponent } from './account/account.component';
 import { InstaloginComponent } from './social/instalogin/instalogin.component';
 import { StreamsComponent } from './streams/streams.component';
 import { InstagramComponent } from './streams/instagram/instagram.component';
+import { InstapostsComponent } from './streams/instagram/instaposts/instaposts.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { InstagramComponent } from './streams/instagram/instagram.component';
     AccountComponent,
     InstaloginComponent,
     StreamsComponent,
-    InstagramComponent
+    InstagramComponent,
+    InstapostsComponent
   ],
   
   imports: [
