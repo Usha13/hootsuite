@@ -9,7 +9,7 @@
             <div *ngFor = "let postnode of instaaccount.posts.edges">
                 <div class="post">
                     <div class="pheader">
-                        <img src="../../../../assets/images/{{instaaccount.profile.profilepic}}">
+                        <img src="../../../../assets/images/{{instaaccount.profile.profilepic}}" />
                         <div>
                             <h3>@{{instaaccount.profile.username}}</h3>
                             <h4>{{postnode.node.timestamp * 1000 | date:'dd/MM/yyyy hh:mm:ss'}}</h4>
@@ -19,10 +19,20 @@
                         <p>{{postnode.node.caption[0].node.text}}</p> 
                     </div>
                     <div class="pimg">
-                        <img src ="{{postnode.node.display_url}}">
-                        <img src ="https://scontent-bom1-1.cdninstagram.com/v/t51.2885-15/e35/182179558_367090718032445_765770098337645147_n.jpg?_nc_ht=scontent-bom1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=gYkorwDxsDQAX9owbPt&edm=APU89FABAAAA&ccb=7-4&oh=f8baa5adaef53822a89635d3b6054363&oe=611585FF&_nc_sid=86f79a">
+                        <img crossorigin="" src ="{{postnode.node.display_url}}" >
                     </div>
-                    <div class="pfooter"></div>
+                    <div class="pfooter">
+                        <div class="first">
+                            <div class="second">
+                                <img src="../../../../../assets/images/ilike.png" />
+                                <p>{{postnode.node.likes}}</p>
+                            </div>
+                            <div class="second">
+                                <img src="../../../../../assets/images/icomment.png" />
+                                <p>{{postnode.node.comments}}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>    
         </div>

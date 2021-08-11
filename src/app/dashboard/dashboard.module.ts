@@ -14,6 +14,9 @@ import { InstaloginComponent } from './social/instalogin/instalogin.component';
 import { StreamsComponent } from './streams/streams.component';
 import { InstagramComponent } from './streams/instagram/instagram.component';
 import { InstapostsComponent } from './streams/instagram/instaposts/instaposts.component';
+import { ComposeComponent } from './compose/compose.component';
+import { InstacomposeComponent } from './compose/instacompose/instacompose.component';
+import { NgxDropzoneModule } from 'ngx-dropzone';
 
 
 @NgModule({
@@ -27,12 +30,15 @@ import { InstapostsComponent } from './streams/instagram/instaposts/instaposts.c
     InstaloginComponent,
     StreamsComponent,
     InstagramComponent,
-    InstapostsComponent
+    InstapostsComponent,
+    ComposeComponent,
+    InstacomposeComponent
   ],
   
   imports: [
     SharedModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    NgxDropzoneModule
   ],
   providers:[SidenavService]
   

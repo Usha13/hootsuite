@@ -1,0 +1,238 @@
+.create{
+    margin: 20px 0;
+}
+.create .head{
+    padding: 12px 20px;
+    background: #2f6b9a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.create .head h1{
+    margin-bottom: 0;
+}
+mat-form-field {
+    font-size: 16px;
+    width: 100%;
+}
+.postform{
+    padding: 20px;
+    text-align: left;
+}
+.postform label{
+    font-size: 16px;
+    font-weight: 500;
+}
+mat-hint {
+    width: 100%;
+    text-align: right;
+}
+
+.btndiv{
+    margin-top: 20px;
+}
+.btndiv button{
+    margin-right: 10px;
+}
+
+
+.tbox{
+    background-color: #beced6;
+}
+/* insta post  */
+.instapost{
+    padding: 20px;
+}
+
+.OxTUb {
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    padding: 0px 0px 32px;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.eZafab {
+    font-size: 20px;
+    font-weight: 500;
+    color: #2f6b9a;
+    text-transform: capitalize;
+    margin: 0px 0px 0px 8px;
+}
+.fFsvbu {
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+}
+
+.eSBWjH {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.kpjyvB {
+    display: flex;
+    flex-flow: row nowrap;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.juimnq {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0px;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.fblvON {
+    flex: 1 1 auto;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: rgb(255, 255, 255);
+}
+.eiKWOS {
+    display: flex;
+    padding: 12px 4px 12px 12px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.fbekgS {
+    display: flex;
+}
+.gJJNTM {
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    line-height: 30px;
+}
+.jkmUgF {
+    position: relative;
+    display: inline-block;
+}
+.gnUKoE {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    object-fit: cover;
+    line-height: 1;
+    vertical-align: middle;
+}
+.gJJNTM {
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    line-height: 30px;
+}
+.hPrWKW {
+    line-height: 18px;
+}
+.djVMjH {
+    color: rgb(36, 31, 33);
+    font-weight: 700;
+    font-size: 16px;
+    margin-right: 5px;
+}
+.hwaEWl {
+    background-image: url("https://i.hootsuite.com/assets/plancreate/ig-menu.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    height: 24px;
+    width: 24px;
+}
+
+.dAtWZr {
+    padding: 12px 15px 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(47, 54, 56);
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+.boBLLc {
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.hqWfdO {
+    display: flex;
+    margin-left: -8px;
+}
+.izmyig {
+    background-image: url("../../../../assets/images/instalike.png");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center center;
+    height: 40px;
+    width: 40px;
+}
+.kdjoFQ {
+    background-image: url("../../../../assets/images/instacomment2.png");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center center;
+    height: 40px;
+    width: 40px;
+}
+.hKhlk {
+    background-image: url("../../../../assets/images/instashare.png");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center center;
+    height: 40px;
+    width: 40px;
+}
+.jJXtHl {
+    display: flex;
+    margin-right: -8px;
+}
+.gPTnFu {
+    background-image: url("../../../../assets/images/instasave.png");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center center;
+    height: 40px;
+    width: 20px;
+}
+.djVMjH {
+    color: rgb(36, 31, 33);
+    font-weight: 700;
+    font-size: 16px;
+    margin-right: 5px;
+}
+.beMNh {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(36, 31, 33);
+    margin-top: 0px;
+}
+.cQXhBv {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(36, 31, 33);
+    margin: 0px;
+}
+.ipbottom{
+    text-align: left;
+}
