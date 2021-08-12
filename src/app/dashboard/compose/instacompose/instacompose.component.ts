@@ -7,33 +7,57 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InstacomposeComponent implements OnInit {
   files = [];
-  filecontents;
+  accountselected;
   caption : string;
+  imageSrc;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSelect(event) {
-    console.log(event);
-    this.files.push(...event.addedFiles);
-    console.log(this.files)
-    this.readFile(event.addedFiles).then((fileContents) => {
-      // Put this string in a request body to upload it to an API.
-      console.log(fileContents);
-    })
+  
+  onFileChange(event) {
+    const reader = new FileReader();
+    
+    if(event.target.files && event.target.files.length) {
+      const [file] = event.target.files;
+      // this.readFile(this.files[this.files.length-1]).then((fileContents) => {
+      //   console.log(fileContents);
+      // })
+      reader.readAsDataURL(file)  
+    
+      reader.onload = () => {
+   
+        this.imageSrc = reader.result as string;      
+        console.log(this.imageSrc)
+      };
+   
+    }
+    
   }
 
+  // onSelect(event) {
+  //   console.log(event);
+  //   this.files.push(...event.addedFiles);
+  //   console.log(this.files)
 
-  onRemove(event) {
-    console.log(event);
-    this.files.splice(this.files.indexOf(event), 1);
-  }
+  //   this.readFile(this.files[this.files.length-1]).then((fileContents) => {
+  //     // Put this string in a request body to upload it to an API.
+  //     console.log(fileContents);
+  //   })
+  // }
+
+
+  // onRemove(event) {
+  //   console.log(event);
+  //   this.files.splice(this.files.indexOf(event), 1);
+  // }
   
   onInstaPost(form){
    console.log(this.caption)
-   console.log(this.files)
+   console.log(this.imageSrc)
+   console.log(this.accountselected)
   }
 
   private async readFile(file: File): Promise<string | ArrayBuffer> {

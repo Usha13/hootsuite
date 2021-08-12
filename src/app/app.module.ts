@@ -12,6 +12,7 @@ import { UserService } from './shared/services/user.service';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthGuard} from './auth/auth.guard';
 import { InstagramService } from './shared/services/instagram.service';
+import { FacebookService } from './shared/services/facebook.service';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { InstagramService } from './shared/services/instagram.service';
     SharedModule,
     ToastrModule.forRoot()
   ],
-  providers: [UserService, AuthGuard, InstagramService],
+  providers: [UserService, AuthGuard, InstagramService, FacebookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

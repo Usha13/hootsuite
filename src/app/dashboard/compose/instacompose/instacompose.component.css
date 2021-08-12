@@ -17,7 +17,7 @@ mat-form-field {
     width: 100%;
 }
 .postform{
-    padding: 20px;
+    padding: 30px 20px;
     text-align: left;
 }
 .postform label{
@@ -34,6 +34,7 @@ mat-hint {
 }
 .btndiv button{
     margin-right: 10px;
+    margin-top: 25px;
 }
 
 
@@ -42,7 +43,15 @@ mat-hint {
 }
 /* insta post  */
 .instapost{
-    padding: 20px;
+    padding: 15px 20px;
+}
+
+.postimg{
+    padding: 12px 20px;
+}
+.postimg img{
+    height: 250px;
+    width: auto;
 }
 
 .OxTUb {
@@ -51,7 +60,7 @@ mat-hint {
     flex-flow: column nowrap;
     -webkit-box-pack: start;
     justify-content: flex-start;
-    padding: 0px 0px 32px;
+    
     -webkit-box-align: center;
     align-items: center;
 }

@@ -10,22 +10,22 @@
                     <form #instapostform="ngForm" (ngSubmit)="onInstaPost(instapostform)" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-12">
-                                <label>Post to</label>
+                                <label>Post to *</label>
                                 <mat-form-field appearance="outline">
-                                    <mat-select placeholder="Select your account" required>
+                                    <mat-select placeholder="Select your account" name="selectAc" #selectAc [(ngModel)]="accountselected" required>
                                     <mat-option value="option">Option 1</mat-option>
                                     <mat-option value="option">Option 2</mat-option>
                                     </mat-select>
                                 </mat-form-field>
                                 
-                                <label>Text</label>
+                                <label>Text *</label>
                                 <mat-form-field  appearance="outline">
                                     <!-- <mat-label>Text</mat-label> -->
-                                    <input type="text" name="Caption" #Caption="ngModel" [(ngModel)]="caption" matInput maxlength="10" placeholder="Enter your text and links..."  required autocomplete="off">
-                                    <mat-hint >{{Caption.value?.length || 0}}/10</mat-hint>
+                                    <input type="text" name="Caption" #Caption="ngModel" [(ngModel)]="caption" matInput maxlength="200" placeholder="Enter your text and links..."  required autocomplete="off">
+                                    <mat-hint >{{Caption.value?.length || 0}}/200</mat-hint>
                                 </mat-form-field>
 
-                                <label>Media</label>
+                                <!-- <label>Media</label>
                                 <div class="custom-dropzone" ngx-dropzone [accept]="'image/*'" (change)="onSelect($event)">
                                     <ngx-dropzone-label>
                                         <div>
@@ -35,14 +35,22 @@
                                     <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" [removable]="true" (removed)="onRemove(f)">
                                         <ngx-dropzone-label>{{ f.name }}</ngx-dropzone-label>
                                     </ngx-dropzone-image-preview>
-                                </div>
+                                </div> -->
+                                <label for="file">File *</label>
+                                    <input id="file" 
+                                        type="file" 
+                                        class="form-control"
+                                        (change)="onFileChange($event)" #pic required  style="margin: 10px 0;">
+                                    <!-- <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+                                        <div *ngIf="f.file.errors.required">File is required.</div>
+                                    </div> -->
                                 
                                 <div class="btndiv">
-                                    <button type="submit" [disabled]="!instapostform.valid" mat-raised-button color="primary">
+                                    <button type="submit" [disabled]="!instapostform.valid || !selectAc.value || !pic.value" mat-raised-button color="primary">
                                         Post Now
                                     </button>
 
-                                    <button type="" [disabled]="!instapostform.valid" mat-raised-button color="accent">
+                                    <button type="" [disabled]="!instapostform.valid || !selectAc.value || !pic.value" mat-raised-button color="accent">
                                         Schedule 
                                     </button>
                                 </div>
@@ -90,22 +98,25 @@
                                         </div>
                                         <div class="sc-iChnts hwkjHf">
                                             <div class="sc-ktjBwf hwaEWl">
-
+                                                
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="postimg">
+                                        <img src="{{imageSrc}}">
                                     </div>
                                     <div class="vk-ContentBody sc-dPrnFZ dAtWZr">
                                         <div class="sc-eSnlgF boBLLc">
                                             <div class="sc-gudSFl hqWfdO">
-                                                <div class="sc-itMjNJ izmyig" src="https://i.hootsuite.com/assets/plancreate/ig-like-heart.svg">
+                                                <div class="sc-itMjNJ izmyig" >
                                                 </div>
-                                                <div class="sc-itMjNJ kdjoFQ" src="https://i.hootsuite.com/assets/plancreate/ig-comment.svg">
+                                                <div class="sc-itMjNJ kdjoFQ" >
                                                 </div>
-                                                <div class="sc-itMjNJ hKhlk" src="https://i.hootsuite.com/assets/plancreate/ig-share.svg">
+                                                <div class="sc-itMjNJ hKhlk" >
                                                 </div>
                                             </div>
                                             <div class="sc-fhFWCS jJXtHl">
-                                                <div class="sc-hOrCBX gzzzgW sc-itMjNJ gPTnFu" src="https://i.hootsuite.com/assets/plancreate/ig-bookmark.svg">
+                                                <div class="sc-hOrCBX gzzzgW sc-itMjNJ gPTnFu">
                                                 </div>
                                             </div>
                                         </div>

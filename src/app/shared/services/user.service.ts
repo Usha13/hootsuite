@@ -83,7 +83,7 @@ export class UserService {
   async signInWithFB() {
     try{
       const fbLoginOptions = {
-        scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,user_location,user_photos,user_posts'
+        scope: 'email,public_profile,user_posts'
       };
       const user = await this.authService.signIn(FacebookLoginProvider.PROVIDER_ID,fbLoginOptions);
       // const user = await this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
@@ -97,6 +97,8 @@ export class UserService {
     }
     
   }
+
+
 
   refreshToken(): void {
     this.authService.refreshAuthToken(GoogleLoginProvider.PROVIDER_ID);

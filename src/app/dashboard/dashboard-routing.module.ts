@@ -35,11 +35,6 @@ const routes: Routes = [
         component : StreamsComponent,
         children:[
           {
-            path: '',
-            redirectTo : 'instagram',
-            pathMatch: 'full'
-          },
-          {
             path: 'instagram',
             component : InstagramComponent,
             children : [
