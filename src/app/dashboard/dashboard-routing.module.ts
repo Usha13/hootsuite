@@ -6,6 +6,8 @@ import { ComposeComponent } from './compose/compose.component';
 import { InstacomposeComponent } from './compose/instacompose/instacompose.component';
 import { DashboardComponent } from './dashboard.component';
 import { SocialComponent } from './social/social.component';
+import { FacebookComponent } from './streams/facebook/facebook.component';
+import { FbpostsComponent } from './streams/facebook/fbposts/fbposts.component';
 import { InstagramComponent } from './streams/instagram/instagram.component';
 import { InstapostsComponent } from './streams/instagram/instaposts/instaposts.component';
 import { StreamsComponent } from './streams/streams.component';
@@ -35,6 +37,11 @@ const routes: Routes = [
         component : StreamsComponent,
         children:[
           {
+            path: '',
+            redirectTo : 'instagram',
+            pathMatch: 'full'
+          },
+          {
             path: 'instagram',
             component : InstagramComponent,
             children : [
@@ -46,6 +53,21 @@ const routes: Routes = [
               {
                 path: ':id',
                 component : InstapostsComponent
+              }
+            ]
+          },
+          {
+            path: 'facebook',
+            component : FacebookComponent,
+            children : [
+              {
+                path: '',
+                redirectTo : '0',
+                pathMatch: 'full'
+              }, 
+              {
+                path: ':id',
+                component : FbpostsComponent
               }
             ]
           },

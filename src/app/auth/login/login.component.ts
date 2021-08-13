@@ -40,6 +40,8 @@ export class LoginComponent implements OnInit {
   }
   googlesignin(){
     this.userService.signInWithGoogle();
+    this.toast.success("Login Successfully")
+    this.router.navigate(['dashboard'])
     
   }
   fbsignin(){

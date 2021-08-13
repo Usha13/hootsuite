@@ -12,7 +12,7 @@ export class InstagramComponent implements OnInit {
   constructor(private instaService : InstagramService, private toast : ToastrService) { }
   
   ngOnInit(): void {
-     this.instaService.getdata().subscribe((res:any)=>{
+    this.instaService.getdata().subscribe((res:any)=>{
         this.data = res.data;
         console.log(this.data)
     },

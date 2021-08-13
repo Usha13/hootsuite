@@ -48,32 +48,21 @@ export class UserService {
   async signInWithGoogle(){ 
     try{
       const user = await this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
-      this.toast.success("Login Successfully")
       console.log(user)
-      let body;
-      // if(user.email)
-      // {
-      //   body = {
-      //     _id: user.id,
-      //     username : user.name,
-      //     email : user.email,
-      //     picture: user.photoUrl,
-      //     token: user.authToken
-      //   }
-      // }
-      // else{
-      //   body = {
-      //     _id: user.id,
-      //     username : user.name,
-      //     picture: user.photoUrl,
-      //     token: user.authToken
-      //   }
-      // }
-      // this.http.post(this.rootURL + "/user/emailsignup" , body ).subscribe((user)=> {
-      //   console.log(user)
-      // });
-      localStorage.setItem("userToken", user.authToken);
-      this.router.navigate(['dashboard'])
+      let body = {
+          username : user.name,
+          email : user.email,
+          picture: user.photoUrl,
+          token: user.authToken,
+          provider : "Google"
+        }
+
+      this.http.post(this.rootURL + "/user/googlesignup" , body ).subscribe((res : any)=> {
+        console.log(res)
+        localStorage.setItem("userToken", res.token);
+        localStorage.setItem("user", JSON.stringify(res));
+      })
+ 
     }
     catch(e){
       console.log(e)
@@ -104,20 +93,9 @@ export class UserService {
     this.authService.refreshAuthToken(GoogleLoginProvider.PROVIDER_ID);
   }
 
-  getprofile(){
-    this.authService.authState.subscribe((user) => {
-      this.user = {
-        username : user.name,
-        email : user.email,
-        picture : user.photoUrl
-      }
-    
-      const userString = JSON.stringify(this.user)
-      localStorage.setItem('user', userString);
-    });
-    
-
-    
+  getprofile(){ 
+      const user = JSON.parse(localStorage.getItem('user'));
+      return user
   }
 
 }

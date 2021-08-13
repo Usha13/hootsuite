@@ -1,0 +1,43 @@
+<div class="instapost">
+    <div class="header">
+        <img src="../../../../../assets/images/fb_logo.png">
+        <h2>Timeline</h2>
+        <h3 *ngIf="fbaccount">{{fbaccount.profile.first_name}} {{fbaccount.profile.last_name}}</h3>
+    </div>
+
+    <div class="posts">
+        <div *ngIf="fbaccount">
+            <div *ngFor = "let postnode of fbaccount.posts.edges">
+                <div class="post">
+                    <div class="pheader">
+                        <img src="{{fbaccount.profile.picture.data.url}}" />
+                        <div>
+                            <h3>{{fbaccount.profile.first_name}} {{fbaccount.profile.last_name}}</h3>
+                            <h4>{{postnode.created_time * 1000 | date:'dd/MM/yyyy hh:mm:ss'}}</h4>
+                        </div>
+                    </div>
+                    <div class="pcaption"  *ngIf="postnode.caption !== undefined">
+                        <p>{{postnode.caption}}</p> 
+                    </div>
+                    <div class="pimg">
+                        <img crossorigin="" src ="{{postnode.full_picture}}" >
+                    </div>
+                    <div class="pfooter">
+                        <div class="first">
+                            <div class="second">
+                                <a href="{{postnode.actions[0].link}}" target="_blank">
+                                    <img src="../../../../../assets/images/ilike.png" />
+                                </a>                               
+                            </div>
+                            <div class="second">
+                                <a href="{{postnode.actions[1].link}}" target="_blank">
+                                    <img src="../../../../../assets/images/instacomment2.png" />
+                                </a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>  
+    </div>
+</div>

@@ -15,8 +15,6 @@ export class AccountComponent implements OnInit {
   }
     
   ngOnInit(): void {
-    console.log(this.user)
-    // this.user = this.userService.getprofile()
     this.userService.getprofile()
     this.user = JSON.parse(localStorage.getItem('user'))
     console.log(this.user)

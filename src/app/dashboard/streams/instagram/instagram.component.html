@@ -1,22 +1,30 @@
 
   <div class="container">
-    <div class="insta" fxLayout="row"  fxLayoutWrap fxLayout.lt-md="column" fxLayoutGap="5%" fxLayoutAlign="space-between">
-      <div fxFlex="25%" class="box fbox mat-elevation-z4" >
-        <div *ngFor = "let iaccount of data; let i = index"  matRipple>
-          <div [routerLink] = "[i]" routerLinkActive="active">
-            <div class="instaitem">
-              <img src="../../../../assets/images/{{iaccount.profile.profilepic}}" >
-              <div class="uname">
-                <h3>@{{iaccount.profile.username}}</h3>
-                <p>{{iaccount.profile.first_name}} {{iaccount.profile.last_name}}</p>
-              </div>          
-            </div>   
-          </div> 
-        </div>
-      </div>
-      <div fxFlex="75%" class="box tbox mat-elevation-z4" matRipple >
-          <router-outlet></router-outlet>
-      </div>
+    <div *ngIf="data.length" class="insta" fxLayout="row"  fxLayoutWrap fxLayout.lt-md="column" fxLayoutGap="5%" fxLayoutAlign="space-between">
       
+        <div fxFlex="25%" class="box fbox mat-elevation-z4" >
+          <div *ngFor = "let iaccount of data; let i = index"  matRipple>
+            <div [routerLink] = "[i]" routerLinkActive="active">
+              <div class="instaitem">
+                <img src="../../../../assets/images/{{iaccount.profile.profilepic}}" >
+                <div class="uname">
+                  <h3>@{{iaccount.profile.username}}</h3>
+                  <p>{{iaccount.profile.first_name}} {{iaccount.profile.last_name}}</p>
+                </div>          
+              </div>   
+            </div> 
+          </div>
+        </div>
+        <div fxFlex="75%" class="box tbox mat-elevation-z4" matRipple >
+            <router-outlet></router-outlet>
+        </div>
     </div>
+
+    <div *ngIf="!data.length" class="insta" fxLayout="row"  fxLayoutWrap fxLayout.lt-md="column" fxLayoutGap="5%" fxLayoutAlign="space-between">
+      
+      <div fxFlex="100%" class="box fbox mat-elevation-z4" >
+        <h2>You don't have any Insta Account</h2>
+      </div>
+  </div>
+
   </div>

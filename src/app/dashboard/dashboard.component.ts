@@ -14,13 +14,11 @@ export class DashboardComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    console.log(this.sidenav)
     this.sidenavService
     .setSidenav(this.sidenav);
   }
 
   ngAfterViewInit() :void{
-    console.log(this.sidenav);
     this.sidenavService
     .setSidenav(this.sidenav);
   }

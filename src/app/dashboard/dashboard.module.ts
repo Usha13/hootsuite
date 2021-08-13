@@ -17,6 +17,8 @@ import { InstapostsComponent } from './streams/instagram/instaposts/instaposts.c
 import { ComposeComponent } from './compose/compose.component';
 import { InstacomposeComponent } from './compose/instacompose/instacompose.component';
 import { NgxDropzoneModule } from 'ngx-dropzone';
+import { FacebookComponent } from './streams/facebook/facebook.component';
+import { FbpostsComponent } from './streams/facebook/fbposts/fbposts.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
     InstagramComponent,
     InstapostsComponent,
     ComposeComponent,
-    InstacomposeComponent
+    InstacomposeComponent,
+    FacebookComponent,
+    FbpostsComponent
   ],
   
   imports: [

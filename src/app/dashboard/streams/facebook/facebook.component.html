@@ -1,0 +1,23 @@
+
+  <div class="container">
+    <div class="fb" fxLayout="row"  fxLayoutWrap fxLayout.lt-md="column" fxLayoutGap="5%" fxLayoutAlign="space-between">
+      <div fxFlex="30%" class="box fbox mat-elevation-z4" >
+        <div *ngFor = "let fbaccount of data; let i = index"  matRipple>
+          <div [routerLink] = "[i]" routerLinkActive="active">
+            <div class="fbitem">
+              <img src="{{fbaccount.profile.picture.data.url}}" >
+              <div class="uname">
+                <h3>{{fbaccount.profile.first_name}} {{fbaccount.profile.last_name}}</h3>
+                <p>Facebook</p>
+              </div>          
+            </div>   
+          </div> 
+        </div>
+      </div>
+      <div fxFlex="70%" class="box tbox mat-elevation-z4" matRipple >
+          <router-outlet></router-outlet>
+      </div>
+      
+    </div>
+  </div>
+
